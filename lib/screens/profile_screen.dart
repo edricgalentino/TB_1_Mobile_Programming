@@ -57,7 +57,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 height: 32,
               ),
               actions: [
-                
+                InkWell(
+                  child: Text('Log out'),
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const LoginScreen(),
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
       body: SingleChildScrollView(
@@ -109,7 +118,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 ),
                               );
                             },
-                          )
+                          ),
                         ],
                       )
                     ],
