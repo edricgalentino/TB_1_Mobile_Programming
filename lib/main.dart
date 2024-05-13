@@ -13,6 +13,13 @@ import 'package:provider/provider.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  /* 
+   * NAMA KELOMPOK
+   * 1. Edric Galentino - 4152210012
+   * 2. Indrianti - 41522110066
+   * 3. Marino Imola - 41522110022
+   */
+
   // initialise app based on platform- web or mobile
   if (kIsWeb) {
     await Firebase.initializeApp(
