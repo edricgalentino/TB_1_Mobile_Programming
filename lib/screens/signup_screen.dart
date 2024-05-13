@@ -35,43 +35,7 @@ class _SignupScreenState extends State<SignupScreen> {
   }
 
   void signUpUser() async {
-    // set loading to true
-    setState(() {
-      _isLoading = true;
-    });
-
-    // signup user using our authmethodds
-    String res = await AuthMethods().signUpUser(
-        email: _emailController.text,
-        password: _passwordController.text,
-        username: _usernameController.text,
-        bio: _bioController.text,
-        file: _image!);
-    // if string returned is sucess, user has been created
-    if (res == "success") {
-      setState(() {
-        _isLoading = false;
-      });
-      // navigate to the home screen
-      if (context.mounted) {
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => const ResponsiveLayout(
-              mobileScreenLayout: MobileScreenLayout(),
-              webScreenLayout: WebScreenLayout(),
-            ),
-          ),
-        );
-      }
-    } else {
-      setState(() {
-        _isLoading = false;
-      });
-      // show the error
-      if (context.mounted) {
-        showSnackBar(context, res);
-      }
-    }
+    
   }
 
   selectImage() async {
