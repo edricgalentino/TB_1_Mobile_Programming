@@ -27,13 +27,13 @@ class _FeedScreenState extends State<FeedScreen> {
   ];
 
   void _onItemTapped(int index) {
-    if( index == 4 ) {
+    if (index == 4) {
       Navigator.of(context).push(
         MaterialPageRoute(
           builder: (context) => const ProfileScreen(),
         ),
       );
-    }else{
+    } else {
       setState(() {
         _selectedIndex = index;
       });
@@ -45,7 +45,8 @@ class _FeedScreenState extends State<FeedScreen> {
     final width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: width > webScreenSize ? webBackgroundColor : mobileBackgroundColor,
+      backgroundColor:
+          width > webScreenSize ? webBackgroundColor : mobileBackgroundColor,
       appBar: width > webScreenSize
           ? null
           : AppBar(
@@ -137,7 +138,8 @@ class _FeedScreenState extends State<FeedScreen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: width > webScreenSize ? Colors.transparent : mobileBackgroundColor,
+        backgroundColor:
+            width > webScreenSize ? Colors.transparent : mobileBackgroundColor,
         selectedItemColor: primaryColor,
         unselectedItemColor: Colors.grey,
         currentIndex: _selectedIndex,
